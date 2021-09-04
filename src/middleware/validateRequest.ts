@@ -2,6 +2,13 @@ import { AnySchema } from "yup";
 import { Request, Response, NextFunction } from "express";
 import log from "../logger";
 
+/**
+ * Requestをバリデートします。
+ * @module validate
+ * @param {AnySchema} schema - APIのResponse,Response,NextFunctionとlocalDictionaryを取得する
+ * @return {Function} - NextFunctionを返す
+ */
+
 const validate = (schema: AnySchema) => async (
   req: Request,
   res: Response,
